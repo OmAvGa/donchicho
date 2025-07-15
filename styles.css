@@ -66,6 +66,24 @@ menu {
   justify-content: center;
 
 }
+/*Quitar este order-items3, solo es para que no tenga margen café*/
+.order-items3 div {
+  background: linear-gradient(to right, #745637, #674d2f, #5a3f26, #4f341d, #412614, #311d0a);
+  width: 150px;
+  /* ⬅️ Fijo */
+  height: 150px;
+  /* ⬅️ Fijo */
+  border-radius: 50%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-items3 div img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
 
 .order-items2 div {
   background: linear-gradient(to right, #745637, #674d2f, #5a3f26, #4f341d, #412614, #311d0a);
