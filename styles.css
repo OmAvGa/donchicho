@@ -69,12 +69,11 @@ menu {
 /*Quitar este order-items3, solo es para que no tenga margen café*/
 .order-items3 div {
   background: linear-gradient(to right, #745637, #674d2f, #5a3f26, #4f341d, #412614, #311d0a);
-  width: 150px;
-  /* ⬅️ Fijo */
-  height: 150px;
-  /* ⬅️ Fijo */
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
+  /* ⬅️ Esto centra horizontalmente */
   overflow: hidden;
   display: flex;
   align-items: center;
