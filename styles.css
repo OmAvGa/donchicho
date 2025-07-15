@@ -66,7 +66,27 @@ menu {
   justify-content: center;
 
 }
-/*Quitar este order-items3, solo es para que no tenga margen café*/
+
+.order-items div img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.order-items div img:hover {
+  animation: bounce 0.5s;
+    transform: rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/*Quitar este order-items3, solo es para que no tenga margen café en el producto individual*/
 .order-items3 div {
   background: linear-gradient(to right, #745637, #674d2f, #5a3f26, #4f341d, #412614, #311d0a);
   width: 350px;
@@ -83,6 +103,7 @@ menu {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+/*--------------------------------------------------------------------------------------------*/
 
 .order-items2 div {
   background: linear-gradient(to right, #745637, #674d2f, #5a3f26, #4f341d, #412614, #311d0a);
@@ -95,7 +116,9 @@ menu {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
+
 .order-items2 div img {
   width: 70%;
   height: auto;
@@ -103,23 +126,11 @@ menu {
   display: block;
 }
 
-.order-items2 div img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-.order-items div img {
-  width: 70%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
 .order-items div img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+  animation: bounce 0.5s;
+    transform: rotate(360deg);
+  transition: transform 0.6s ease;
 }
-
-
 .order-items span {
   font-weight: 600;
   font-size: 18px;
