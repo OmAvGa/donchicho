@@ -76,8 +76,6 @@ menu {
 
 .order-items div img:hover {
   animation: bounce 0.5s;
-    transform: rotate(360deg);
-  transition: transform 0.6s ease;
 }
 
 @keyframes bounce {
@@ -126,10 +124,9 @@ menu {
   display: block;
 }
 
-.order-items div img:hover {
+.order-items2 div img:hover {
   animation: bounce 0.5s;
-    transform: rotate(360deg);
-  transition: transform 0.6s ease;
+
 }
 .order-items span {
   font-weight: 600;
