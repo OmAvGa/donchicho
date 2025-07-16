@@ -87,10 +87,16 @@ function enviarWhatsApp() {
 const items = document.querySelectorAll('.order-items2 div img');
 
 items.forEach(item => {
-  item.addEventListener('click', () => {
+  function animateBounce() {
+    item.classList.remove('bounce'); // Por si acaso no se eliminó antes
+    void item.offsetWidth; // ⚡ Reinicia la animación forzando reflow
     item.classList.add('bounce');
+
     setTimeout(() => {
       item.classList.remove('bounce');
-    }, 500);
-  });
+    }, 500); // Tiempo de la animación
+  }
+
+  item.addEventListener('click', animateBounce);
+  item.addEventListener('touchstart', animateBounce);
 });
