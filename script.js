@@ -84,21 +84,13 @@ function enviarWhatsApp() {
 }
 
 /*Efecto rebote celular*/
-const links = document.querySelectorAll('.bounce-link');
+const items = document.querySelectorAll('.order-items2 div img');
 
-links.forEach(link => {
-  const img = link.querySelector('img');
-
-  function animateAndRedirect(e) {
-    e.preventDefault(); // Detener la navegación directa
-    img.classList.add('bounce');
-
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.add('bounce');
     setTimeout(() => {
-      img.classList.remove('bounce');
-      window.location.href = link.href; // Ir a la página después del rebote
+      item.classList.remove('bounce');
     }, 500);
-  }
-
-  link.addEventListener('click', animateAndRedirect);
-  link.addEventListener('touchstart', animateAndRedirect);
+  });
 });
