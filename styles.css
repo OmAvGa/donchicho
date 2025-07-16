@@ -78,12 +78,6 @@ menu {
   animation: bounce 0.5s;
 }
 
-@keyframes bounce {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
 /*Quitar este order-items3, solo es para que no tenga margen café en el producto individual*/
 .order-items3 div {
   background: linear-gradient(to right, #745637, #674d2f, #5a3f26, #4f341d, #412614, #311d0a);
@@ -128,6 +122,13 @@ menu {
   animation: bounce 0.5s;
 
 }
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 .order-items span {
   font-weight: 600;
   font-size: 18px;

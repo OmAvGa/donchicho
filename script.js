@@ -82,3 +82,15 @@ function enviarWhatsApp() {
 
   window.open(url, '_blank');
 }
+
+/*Efecto rebote celular*/
+const items = document.querySelectorAll('.order-items2 div img');
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.add('bounce');
+    setTimeout(() => {
+      item.classList.remove('bounce');
+    }, 500); // Tiempo igual al de la animación
+  });
+});
