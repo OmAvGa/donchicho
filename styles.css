@@ -54,8 +54,8 @@ menu {
 
 .order-items div {
   background: linear-gradient(to right, #745637, #674d2f, #5a3f26, #4f341d, #412614, #311d0a);
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
   overflow: hidden;
@@ -1055,7 +1055,8 @@ h1 {
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.5rem; 
+  /*Tamaño del texto descriptivo de cada producto*/
   line-height: 1.6;
   max-width: 600px;
   margin: auto;
