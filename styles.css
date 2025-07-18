@@ -1287,26 +1287,13 @@ h1 {
   }
 }
 
-/*Cargando pagina*/
-#preloader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loader-img {
-  width: 100px;
-  animation: spin 1s linear infinite;
-}
-
+/*Calando el loading logo*/
 @keyframes spin {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+
+.loading-logo {
+  animation: spin 2s linear infinite;
+  display: block;
 }

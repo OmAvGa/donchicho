@@ -85,6 +85,56 @@ function enviarWhatsApp() {
 
 
 //Cargar pagina de mientras
-  window.addEventListener('load', () => {
-    document.getElementById('preloader').style.display = 'none';
+document.addEventListener('DOMContentLoaded', () => {
+  // Selecciona todos los contenedores que tienen imágenes (puedes ajustar selector)
+  const imageWrappers = document.querySelectorAll('.order-items > div, .order-items2 > div');
+
+  imageWrappers.forEach(wrapper => {
+    const img = wrapper.querySelector('img');
+    if (!img) return;
+
+    // Crea el logo girando
+    const logo = document.createElement('img');
+    logo.src = '/img/logosinmarco.png';  // Cambia por la ruta real
+    logo.alt = 'Cargando...';
+    logo.classList.add('loading-logo');
+
+    // Aplica estilos para posición (usa CSS para eso, este solo es un ejemplo rápido)
+    logo.style.position = 'absolute';
+    logo.style.top = '50%';
+    logo.style.left = '50%';
+    logo.style.transform = 'translate(-50%, -50%)';
+    logo.style.zIndex = '10';
+    logo.style.width = '100px';
+    logo.style.height = '100px';
+    logo.style.animation = 'spin 2s linear infinite';
+
+    // Posiciona el wrapper para que sea relativo y el logo quede encima
+    wrapper.style.position = 'relative';
+
+    // Inserta el logo antes de la imagen
+    wrapper.insertBefore(logo, img);
+
+    // Oculta la imagen inicialmente
+    img.style.display = 'none';
+    img.style.position = 'absolute';
+    img.style.top = '0';
+    img.style.left = '0';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+    img.style.zIndex = '5';
+
+    // Cuando la imagen cargue, oculta el logo y muestra la imagen
+    img.addEventListener('load', () => {
+      logo.style.display = 'none';
+      img.style.display = 'block';
+    });
+
+    // Si la imagen ya está en caché y cargada
+    if (img.complete && img.naturalHeight !== 0) {
+      logo.style.display = 'none';
+      img.style.display = 'block';
+    }
   });
+});
