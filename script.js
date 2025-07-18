@@ -82,3 +82,9 @@ function enviarWhatsApp() {
 
   window.open(url, '_blank');
 }
+
+
+//Cargar pagina de mientras
+  window.addEventListener('load', () => {
+    document.getElementById('preloader').style.display = 'none';
+  });
