@@ -85,4 +85,44 @@ function enviarWhatsApp() {
 
 
 //Cargar pagina de mientras
- 
+ document.addEventListener('DOMContentLoaded', () => {
+  // Selecciona todas las imágenes dentro de .order-items y .order-items2
+  const imgs = document.querySelectorAll('.order-items > div > img, .order-items2 > div > img');
+
+  imgs.forEach(img => {
+    // Creamos un wrapper contenedor
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('loading-wrapper');
+
+    // Insertamos el wrapper antes que la imagen en el DOM
+    img.parentNode.insertBefore(wrapper, img);
+
+    // Movemos la imagen dentro del wrapper
+    wrapper.appendChild(img);
+
+    // Creamos el logo girando
+    const logo = document.createElement('img');
+    logo.src = '/donchicho/img/logosinmarco.png'; // Cambia a la ruta real
+    logo.alt = 'Cargando...';
+    logo.classList.add('loading-logo');
+
+    // Ponemos el logo dentro del wrapper
+    wrapper.appendChild(logo);
+
+    // Ocultamos la imagen al inicio
+    img.style.display = 'none';
+
+    // Cuando la imagen cargue, ocultamos el logo y mostramos la imagen
+    img.addEventListener('load', () => {
+      logo.style.display = 'none';
+      img.style.display = 'block';
+    });
+
+    // Si ya estaba cargada la imagen (cache)
+    if (img.complete && img.naturalHeight !== 0) {
+      logo.style.display = 'none';
+      img.style.display = 'block';
+    }
+  });
+});
+

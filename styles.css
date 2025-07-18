@@ -1288,3 +1288,40 @@ h1 {
 }
 
 /*Calando el loading logo*/
+/* Para el contenedor que vamos a crear dinámicamente */
+.loading-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+/* Logo girando */
+.loading-logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  z-index: 10;
+}
+
+/* Animación */
+@keyframes spin {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+
+/* Imagen inicialmente oculta y ajustada */
+.loading-wrapper img:not(.loading-logo) {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 5;
+}
