@@ -5,50 +5,48 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/donchicho/styles.css">
-  <link rel="shortcut icon" href="/donchicho/img/iconos/logosinmarco.png" type="images/x-icon">
-  <title>Don Chicho</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/iconos/logosinmarco.png" type="image/png" />
+  <title>Menú | Don Chicho</title>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-XJMK44YN3R');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJMK44YN3R');
+  </script>
 </head>
 
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
-        <a href="/donchicho/index.html">
-          <img src="/donchicho/img/iconos/logosinmarco.png" alt="Chicho" />
+        <a href="index.html">
+          <img src="img/iconos/logosinmarco.png" alt="Don Chicho" />
         </a>
       </div>
 
       <ul class="navbar-nav-left">
-        <li>
-          <a href="/donchicho/menu.html">Menú</a>
-        </li>
-        <li>
-          <a href="/donchicho/historia.html">Historia</a>
-        </li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="historia.html">Historia</a></li>
       </ul>
 
       <ul class="navbar-nav-right">
         <li>
-          <a href="/donchicho/localiza.html">
-            <img src="/donchicho/img/iconos/location.svg" alt="" />
+          <a href="localiza.html">
+            <img src="img/iconos/location.svg" alt="" />
             <span>Localiza sucursal</span>
           </a>
         </li>
         <li>
-          <a href="tel:+523921021698" class="btn btn-light">
-            Teléfono
-          </a>
+          <a href="tel:+523921021698" class="btn btn-light">Teléfono</a>
         </li>
         <li>
           <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
@@ -57,7 +55,7 @@
         </li>
       </ul>
 
-      <!-- Hamburger Menu -->
+      <!-- Botón hamburguesa -->
       <button type="button" class="hamburger" id="menu-btn">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
@@ -70,10 +68,10 @@
   <div class="mobile-menu hidden" id="menu">
     <ul>
       <li>
-        <a href="/donchicho/menu.html">Menú</a>
+        <a href="menu.html">Menú</a>
       </li>
       <li>
-        <a href="/donchicho/historia.html">Historia</a>
+        <a href="historia.html">Historia</a>
       </li>
     </ul>
     <div class="mobile-menu-bottom">
@@ -86,8 +84,8 @@
         </button>
       </div>
       <div>
-        <a href="/donchicho/localiza.html">
-          <img src="/donchicho/img/iconos/location.svg" alt="" />
+        <a href="localiza.html">
+          <img src="img/iconos/location.svg" alt="" />
           <span>Localiza sucursal</span>
         </a>
       </div>
