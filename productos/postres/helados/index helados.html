@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/donchicho/styles.css">
+  <link rel="shortcut icon" href="/donchicho/img/logosinmarco.png" type="images/x-icon">
+  <title>Helados | Don Chicho</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJMK44YN3R');
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="/donchicho/index.html">
+          <img src="/donchicho/img/logosinmarco.png" alt="Chicho" />
+        </a>
+      </div>
+
+      <ul class="navbar-nav-left">
+        <li>
+          <a href="/donchicho/menu.html">Menú</a>
+        </li>
+        <li>
+          <a href="/donchicho/historia.html">Historia</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav-right">
+        <li>
+          <a href="/donchicho/localiza.html">
+            <img src="/donchicho/img/location.svg" alt="" />
+            <span>Localiza sucursal</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+523921021698" class="btn btn-light">
+            Teléfono
+          </a>
+        </li>
+        <li>
+          <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+            WhatsApp
+          </button>
+        </li>
+      </ul>
+
+      <!-- Hamburger Menu -->
+      <button type="button" class="hamburger" id="menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+    <ul>
+      <li>
+        <a href="/donchicho/menu.html">Menú</a>
+      </li>
+      <li>
+        <a href="/donchicho/historia.html">Historia</a>
+      </li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <div style="display: flex; gap: 10px;">
+        <a href="tel:+523921021698">
+          <button class="btn btn-light">Teléfono</button>
+        </a>
+        <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+          WhatsApp
+        </button>
+      </div>
+      <div>
+        <a href="/donchicho/localiza.html">
+          <img src="/donchicho/img/location.svg" alt="" />
+          <span>Localiza sucursal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: rgba(55, 32, 13, 0.3); margin: 1.5rem 0;"></div>
+
+  <div class="menu">
+    <div class="menu-items">
+      <div class="item-head" style="text-align: left; padding-bottom: 10px; border-bottom: 1px solid #111;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <a href="/donchicho/menu.html" style="display: flex; align-items: center;">
+            <img src="/donchicho/img/atras.png" alt="Atrás" style="width: 20px; height: 20px; cursor: pointer;">
+          </a>
+          <h2 style="margin: 0;"><strong>Helados</strong></h2>
+        </div>
+        <p style="margin: 5px 0 0 30px; font-size: 18px; color: #111;">en presentación de vaso, cono, canasta o litro
+        </p>
+      </div>
+      <div class="order-menu-items">
+        <a href="vainilla.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de vainilla.webp" alt="">
+            </div>
+            <span>Vainilla</span>
+          </div>
+        </a>
+        <a href="fresa.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de fresa.webp" alt="">
+            </div>
+            <span>Fresa</span>
+          </div>
+        </a>
+        <a href="café.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de cafe.webp" alt="">
+            </div>
+            <span>Café
+            </span>
+          </div>
+        </a>
+        <a href="galleta oreo.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de oreo.webp" alt="">
+            </div>
+            <span>Galletas Oreo</span>
+          </div>
+        </a>
+        <a href="frutos secos.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de frutos secos.webp" alt="">
+            </div>
+            <span>Frutos Secos</span>
+          </div>
+        </a>
+        <a href="chongos.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de chongos.webp" alt="">
+            </div>
+            <span>Chongos</span>
+          </div>
+        </a>
+        <a href="nuez.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de nuez.webp" alt="">
+            </div>
+            <span>Nuez</span>
+          </div>
+        </a>
+        <a href="chocolate.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de chocolate.webp" alt="">
+            </div>
+            <span>Chocolate</span>
+          </div>
+        </a>
+        <a href="pistache.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de pistache.webp" alt="">
+            </div>
+            <span>Pistache</span>
+          </div>
+        </a>
+        <a href="limon.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de limon.webp" alt="">
+            </div>
+            <span>Limón</span>
+          </div>
+        </a>
+        <a href="coco.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de coco.webp" alt="">
+            </div>
+            <span>Coco</span>
+          </div>
+        </a>
+        <a href="fresa de agua.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de fresa de agua.webp" alt="">
+            </div>
+            <span>Fresa de Agua</span>
+          </div>
+        </a>
+        <a href="chicle.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de chicle.webp" alt="">
+            </div>
+            <span>Chicle</span>
+          </div>
+        </a>
+        <a href="mango.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de mango.webp" alt="">
+            </div>
+            <span>Mango</span>
+          </div>
+        </a>
+        <a href="rompope.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de rompope.webp" alt="">
+            </div>
+            <span>Rompope</span>
+          </div>
+        </a>
+        <a href="calabaza.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de calabaza.webp" alt="">
+            </div>
+            <span>Calabaza</span>
+          </div>
+        </a>
+        <a href="mantequilla.html">
+          <div class="order-items">
+            <div>
+              <img src="img helados/Helado de mantequilla.webp" alt="">
+            </div>
+            <span>Mantequilla</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div style="height: 1px; background-color: #ccc;"></div>
+    <div class="footer-container">
+      <div class="social">
+        <a href="https://wa.me/523921021698" target="_blank">
+          <img src="/donchicho/img/whatsapp.svg" alt="WhatsApp" />
+        </a>
+        <a href="https://www.facebook.com/nievedegarrafaloschichosjamay">
+          <img src="/donchicho/img/social-facebook.svg" alt="facebook" />
+        </a>
+        <a href="https://instagram.com">
+          <img src="/donchicho/img/social-instagram.svg" alt="" />
+        </a>
+      </div>
+      <p>© 2025 Nieves de Garrafa y Café "Don Chicho". Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="/donchicho/script.js"></script>
+</body>
+
+</html>
