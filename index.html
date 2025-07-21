@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="img/logosinmarco.png" type="image/png" />
+  <title>Don Chicho</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJMK44YN3R');
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="img/logosinmarco.png" alt="Don Chicho" />
+        </a>
+      </div>
+
+      <ul class="navbar-nav-left">
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+
+      <ul class="navbar-nav-right">
+        <li>
+          <a href="localiza.html">
+            <img src="img/location.svg" alt="" />
+            <span>Localiza sucursal</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+523921021698" class="btn btn-light">Teléfono</a>
+        </li>
+        <li>
+          <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+            WhatsApp
+          </button>
+        </li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button type="button" class="hamburger" id="menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+    <ul>
+      <li>
+        <a href="menu.html">Menú</a>
+      </li>
+      <li>
+        <a href="historia.html">Historia</a>
+      </li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <div style="display: flex; gap: 10px;">
+        <a href="tel:+523921021698">
+          <button class="btn btn-light">Teléfono</button>
+        </a>
+        <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+          WhatsApp
+        </button>
+      </div>
+      <div>
+        <a href="localiza.html">
+          <img src="img/location.svg" alt="" />
+          <span>Localiza sucursal</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <!-- Box A -->
+  <section class="box box-a bg-primary text-center py-md" data-aos="fade-up">
+    <div class="box-inner">
+      <h2 class="text-xlb1">Nieve de Garrafa & Café "Don Chicho"</h2>
+      <p class="text-mdb1">
+        La combinación perfecta entre café de especialidad y helado artesanal
+      </p>
+    </div>
+  </section>
+
+  <!-- Box B -->
+  <section class="box box-b bg-secondary grid-col-2" data-aos="fade-up">
+    <img src="img/parroquia.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">¡Ya abrimos nuestra nueva sucursal!</h2>
+      <p class="text-md">
+        Visítanos en sucursal parroquia, será un placer atenderte
+      </p>
+      <a href="localiza.html" class="btn btn-light-outline">Ver ubicación</a>
+    </div>
+  </section>
+
+  <!-- Box C -->
+  <section class="box box-c bg-secondary grid-col-2 grid-reversed" data-aos="fade-up">
+    <img src="img/red velvet.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">Nuevo sabor: Red Velvet</h2>
+      <p class="text-md">
+        Descubre el dulce y cremoso sabor del nuevo Red Velvet, edición especial.
+      </p>
+      <a href="https://wa.me/523921021698?text=Me%20gustar%C3%ADa%20ordenar%20un%20frapp%C3%A9%20Red%20Velvet"
+        class="btn btn-dark-outline">
+        ¡Pide tu Frappé Red Velvet!
+      </a>
+    </div>
+  </section>
+
+  <!-- Box D -->
+  <section class="box box-d bg-primary grid-col-2" data-aos="fade-up">
+    <img src="img/tazas.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">¡Llévate un pedacito de "Don Chicho" a casa!</h2>
+      <p class="text-md">
+        Ya disponibles nuestras tazas exclusivas, ideales para tu café favorito.
+      </p>
+      <a href="https://wa.me/523921021698?text=Hola%2C%20me%20interesan%20las%20tazas%20exclusivas%20de%20Don%20Chicho.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+        class="btn btn-light-outline">
+        ¡Pregunta por alguna!
+      </a>
+    </div>
+  </section>
+
+  <!-- Box E -->
+  <section class="box box-e bg-secondary grid-col-2 grid-reversed" data-aos="fade-up">
+    <img src="img/browniehelado.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">Brownie con helado, una delicia irresistible</h2>
+      <p class="text-md">
+        La suavidad del helado artesanal combinada con nuestro brownie de textura perfecta.
+        ¡Tienes que probarlo!
+      </p>
+      <a href="https://wa.me/523921021698?text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20ordenar%20un%20brownie%20con%20helado."
+        class="btn btn-dark-outline">
+        ¡Pide tu brownie con helado!
+      </a>
+    </div>
+  </section>
+
+  <!-- Box G -->
+  <section class="box box-g bg-secondary grid-col-2" data-aos="fade-up">
+    <img src="img/litros.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">¡Disfruta Don Chicho en grande!</h2>
+      <p class="text-md">
+        Llévate nuestros helados artesanales por litro y comparte momentos dulces con tus seres queridos.
+      </p>
+      <a href="https://wa.me/523921021698?text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20ordenar%20un%20litro%20de%20nieve."
+        class="btn btn-dark-outline">
+        ¡Ordena ahora!
+      </a>
+    </div>
+  </section>
+
+  <!-- Box F -->
+  <section class="box box-f grid-col-2" data-aos="fade-up">
+    <div class="box-item box-f b1">
+      <img src="img/trabajo.jpg" alt="" />
+      <div class="bg-extra py-lg">
+        <div class="box-text">
+          <h2 class="text-xl">¡Únete al equipo Don Chicho!</h2>
+          <p class="text-md">
+            Si te gusta el buen ambiente, el trato con las personas y quieres crecer junto a nosotros, únete al equipo
+            de Don Chicho. ¡Estamos buscando gente comprometida y con ganas de trabajar!
+          </p>
+          <a href="https://wa.me/523921021698?text=Hola%2C%20vi%20la%20vacante%20en%20Nieves%20de%20Garrafa%20y%20Caf%C3%A9%20Don%20Chicho%20y%20estoy%20interesado(a)%20en%20trabajar%20con%20ustedes.%20%C2%BFPueden%20darme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F"
+            class="btn btn-dark-outline">Más información</a>
+        </div>
+      </div>
+    </div>
+    <div class="box-item box-f b2">
+      <img src="img/repartidor.png" alt="" />
+      <div class="bg-extra py-lg">
+        <div class="box-text">
+          <h2 class="text-xl">¡Servicio a domicilio gratis!</h2>
+          <p class="text-md">
+            Disfruta de nuestras deliciosas nieves y café sin moverte de casa</p>
+          <a href="https://wa.me/523921021698?text=Hola%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%2C%20por%20favor."
+            class="btn btn-dark-outline">
+            ¡Ordena Ahora!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+<footer class="footer">
+  <div style="height: 1px; background-color: #ccc;"></div>
+  <div class="footer-container">
+    <div class="social">
+      <a href="https://wa.me/523921021698" target="_blank">
+        <img src="./img/whatsapp.svg" alt="WhatsApp" />
+      </a>
+      <a href="https://www.facebook.com/nievedegarrafaloschichosjamay">
+        <img src="./img/social-facebook.svg" alt="facebook" />
+      </a>
+      <a href="https://instagram.com">
+        <img src="./img/social-instagram.svg" alt="" />
+      </a>
+    </div>
+    <p>© 2025 Nieves de Garrafa y Café "Don Chicho". Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</html>

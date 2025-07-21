@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/logosinmarco.png" type="image/png" />
+  <title>Menú | Don Chicho</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJMK44YN3R');
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="img/logosinmarco.png" alt="Don Chicho" />
+        </a>
+      </div>
+
+      <ul class="navbar-nav-left">
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+
+      <ul class="navbar-nav-right">
+        <li>
+          <a href="localiza.html">
+            <img src="img/location.svg" alt="" />
+            <span>Localiza sucursal</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+523921021698" class="btn btn-light">Teléfono</a>
+        </li>
+        <li>
+          <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+            WhatsApp
+          </button>
+        </li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button type="button" class="hamburger" id="menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+    <ul>
+      <li>
+        <a href="menu.html">Menú</a>
+      </li>
+      <li>
+        <a href="historia.html">Historia</a>
+      </li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <div style="display: flex; gap: 10px;">
+        <a href="tel:+523921021698">
+          <button class="btn btn-light">Teléfono</button>
+        </a>
+        <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+          WhatsApp
+        </button>
+      </div>
+      <div>
+        <a href="localiza.html">
+          <img src="img/location.svg" alt="" />
+          <span>Localiza sucursal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="menu-items">
+      <div class="item-head" style="display: flex; align-items: center; gap: 10px;">
+        <a href="index.html" style="display: flex; align-items: center;">
+          <img src="img/atras.png" alt="" style="width: 20px; height: 20px; cursor: pointer;">
+        </a>
+        <h2 style="margin: 0;"><strong>Conoce nuestras bebidas y postres</strong></h2>
+      </div>
+      <div class="item-head">
+        <h3>Bebidas</h3>
+      </div>
+      <div class="order-menu-items">
+        <a href="productos/bebidas/frappes/index frappe.html">
+          <div class="order-items">
+            <div>
+              <img src="/productos/bebidas/frappes/img frappes/Frappe caramelo.png" alt="">
+            </div>
+            <span>Frappés</span>
+          </div>
+        </a>
+        <a href="productos/bebidas/malteada/index malteadas.html">
+          <div class="order-items">
+            <div>
+              <img src="productos/bebidas/malteada/img malteadas/malteada de chicle.png" alt="">
+            </div>
+            <span>Malteadas</span>
+          </div>
+        </a>
+        <a href="productos/bebidas/cafes/index cafe.html">
+          <div class="order-items">
+            <div>
+              <img src="img/te.png" alt="">
+            </div>
+            <span>Cafés</span>
+          </div>
+        </a>
+        <a href="productos/bebidas/capuchinos/index capuchinos.html">
+          <div class="order-items">
+            <div>
+              <img src="img/coldbrew.png" alt="">
+            </div>
+            <span>Capuchinos</span>
+          </div>
+        </a>
+        <a href="productos/bebidas/ice latte/index ice latte.html">
+          <div class="order-items">
+            <div>
+              <img src="img/coldbrew.png" alt="">
+            </div>
+            <span>Ice Lattes</span>
+          </div>
+        </a>
+        <a href="productos/bebidas/tes/index tes.html">
+          <div class="order-items">
+            <div>
+              <img src="img/coldbrew.png" alt="">
+            </div>
+            <span>Tés Fríos</span>
+          </div>
+        </a>
+        <a href="productos/bebidas/tes calientes/index tes calientes.html">
+          <div class="order-items">
+            <div>
+              <img src="img/coldbrew.png" alt="">
+            </div>
+            <span>Tés Calientes</span>
+          </div>
+        </a>
+        <a href="productos/bebidas/smoothies/index smoothies.html">
+          <div class="order-items">
+            <div>
+              <img src="img/coldbrew.png" alt="">
+            </div>
+            <span>Smoothies</span>
+          </div>
+        </a>
+      </div>
+      <div class="item-head">
+        <h3>Postres</h3>
+      </div>
+      <div class="order-menu-items">
+        <a href="productos/postres/helados/index helados.html">
+          <div class="order-items">
+            <div>
+              <img src="/donchicho/productos/postres/helados/img helados/Helado de nuez.webp" alt="">
+            </div>
+            <span>Helados</span>
+          </div>
+        </a>
+        <a href="productos/postres/brownies/index brownie.html">
+          <div class="order-items">
+            <div>
+              <img src="/donchicho/productos/postres/brownies/img brownies/Brownie byme con helado.webp" alt="">
+            </div>
+            <span>Brownies</span>
+          </div>
+        </a>
+        <a href="productos/postres/banana splits/banana split.html">
+          <div class="order-items">
+            <div>
+              <img src="img/frappuccino.png" alt="">
+            </div>
+            <span>Banana Splits</span>
+          </div>
+        </a>
+        <a href="productos/postres/galletas/index galletas.html">
+          <div class="order-items">
+            <div>
+              <img src="/donchicho/productos/postres/galletas/img galletas/Galletas de canela dulces detalles.webp" alt="">
+            </div>
+            <span>Galletas</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="descargar-container">
+    <button class="btn btn-dark" onclick="descargarImagen()">Descargar menú</button>
+  </div>
+
+
+  <footer class="footer">
+    <div style="height: 1px; background-color: #ccc;"></div>
+    <div class="footer-container">
+      <div class="social">
+        <a href="https://wa.me/523921021698" target="_blank">
+          <img src="./img/whatsapp.svg" alt="WhatsApp" />
+        </a>
+        <a href="https://www.facebook.com/nievedegarrafaloschichosjamay">
+          <img src="./img/social-facebook.svg" alt="facebook" />
+        </a>
+        <a href="https://instagram.com">
+          <img src="./img/social-instagram.svg" alt="" />
+        </a>
+      </div>
+      <p>© 2025 Nieves de Garrafa y Café "Don Chicho". Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
