@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/iconos/logosinmarco.png" type="image/png" />
+  <title>Don Chicho</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJMK44YN3R');
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="img/iconos/logosinmarco.png" alt="Don Chicho" />
+        </a>
+      </div>
+
+      <ul class="navbar-nav-left">
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+
+      <ul class="navbar-nav-right">
+        <li>
+          <a href="localiza.html">
+            <img src="img/iconos/location.svg" alt="" />
+            <span>Localiza sucursal</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+523921021698" class="btn btn-light">Teléfono</a>
+        </li>
+        <li>
+          <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+            WhatsApp
+          </button>
+        </li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button type="button" class="hamburger" id="menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+    <ul>
+      <li>
+        <a href="menu.html">Menú</a>
+      </li>
+      <li>
+        <a href="historia.html">Historia</a>
+      </li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <div style="display: flex; gap: 10px;">
+        <a href="tel:+523921021698">
+          <button class="btn btn-light">Teléfono</button>
+        </a>
+        <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+          WhatsApp
+        </button>
+      </div>
+      <div>
+        <a href="localiza.html">
+          <img src="img/iconos/location.svg" alt="" />
+          <span>Localiza sucursal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: rgba(55, 32, 13, 0.3); margin: 1.5rem 0;"></div>
+
+
+  <body>
+
+    <div class="container fade-up">
+      <div class="order-items2">
+        <div><img id="productoImagen" src="" alt=""></div>
+      </div>
+      <h1 id="productoTitulo"></h1>
+      <p class="description" id="productoDescripcion"></p>
+      <a href="javascript:history.back()" class="back-button">← Volver atrás</a>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const categoria = params.get('categoria');
+      const id = params.get('id');
+
+      const productos = {
+        frappes: {
+          espresso: {
+            titulo: "Frappé Espresso",
+            descripcion: "Un estallido de energía helada con el sabor intenso del mejor café.",
+            imagen: "/donchicho/img/frappes/Frappe espresso.webp"
+          },
+          crema: {
+            titulo: "Frappé de Crema Irlandesa",
+            descripcion: "Un frappé cremoso con el delicioso toque de licor irlandés que conquista a todos.",
+            imagen: "/donchicho/img/frappes/Frappe de crema irlandesa.webp"
+          },
+          banana_moka: {
+            titulo: "Frappé de Banana Moka",
+            descripcion: "Lo tropical del plátano se encuentra con el chocolate y el café en un combo inigualable.",
+            imagen: "/donchicho/img/frappes/Frappe de banana moka.webp"
+          },
+          canela: {
+            titulo: "Frappé de Canela",
+            descripcion: "Una explosión aromática que combina perfectamente con la suavidad de un frappé helado.",
+            imagen: "/donchicho/img/frappes/Frappe de canela.webp"
+          },
+          caramelo: {
+            titulo: "Frappé de Caramelo",
+            descripcion: "La dulzura del caramelo con un toque elegante que se derrite en tu paladar.",
+            imagen: "/donchicho/img/frappes/Frappe de caramelo.webp"
+          },
+          chai: {
+            titulo: "Frappé de Chai",
+            descripcion: "Especias cálidas con un frescor que reconforta y sorprende.",
+            imagen: "/donchicho/img/frappes/Frappe de chai.webp"
+          },
+          chocolate_blanco: {
+            titulo: "Frappé de Chocolate Blanco",
+            descripcion: "Cremoso y seductor, con ese dulzor que te hace cerrar los ojos al probarlo.",
+            imagen: "/donchicho/img/frappes/Frappe de chocolate blanco.webp"
+          },
+          licor_de_cafe: {
+            titulo: "Frappé de Licor de Café",
+            descripcion: "El sabor profundo del café y el licor en una experiencia helada y deliciosa.",
+            imagen: "/donchicho/img/frappes/Frappe de licor de cafe.webp"
+          },
+          licor_de_almendras: {
+            titulo: "Frappé de Licor de Almendras",
+            descripcion: "Dulce, aromático y cremoso, como un abrazo en forma de frappé.",
+            imagen: "/donchicho/img/frappes/Frappe de licor de almendras.webp"
+          },
+          matcha: {
+            titulo: "Frappé de Matcha",
+            descripcion: "Refrescante y lleno de antioxidantes, el matcha es sabor y energía en uno solo.",
+            imagen: "/donchicho/img/frappes/Frappe de matcha.webp"
+          },
+          moka_con_menta: {
+            titulo: "Frappé de Moka con Menta",
+            descripcion: "Café, chocolate y menta se fusionan en una experiencia única y refrescante.",
+            imagen: "/donchicho/img/frappes/Frappe de moka con menta.webp"
+          },
+          moka: {
+            titulo: "Frappé de Moka",
+            descripcion: "Una mezcla irresistible de café y chocolate que te enamora desde el primer sorbo.",
+            imagen: "/donchicho/img/frappes/Frappe de moka.webp"
+          },
+          red_velvet: {
+            titulo: "Frappé de Red Velvet",
+            descripcion: "Cremoso, dulce y con el irresistible sabor del clásico Red Velvet, en una versión helada que conquista a cada sorbo.",
+            imagen: "/donchicho/img/frappes/Frappe de red velvet.webp"
+          },
+          taro: {
+            titulo: "Frappé de Taro",
+            descripcion: "Suave, colorido y con un sabor exótico que se convertirá en tu nuevo favorito.",
+            imagen: "/donchicho/img/frappes/Frappe de taro.webp"
+          }
+        },
+
+        cafes: {
+          affogato: {
+            titulo: "Affogato",
+            descripcion: "Una deliciosa fusión de helado con café caliente, perfecto como postre o antojo.",
+            imagen: "/donchicho/img/cafes/affogato.webp"
+          },
+          americano_intenso: {
+            titulo: "Café Americano Intenso",
+            descripcion: "Sabor fuerte, cuerpo completo y carácter en cada sorbo.",
+            imagen: "/donchicho/img/cafes/americano_intenso.webp"
+          },
+          americano: {
+            titulo: "Café Americano",
+            descripcion: "Café suave, aromático y perfecto para los que aman lo clásico.",
+            imagen: "/donchicho/img/cafes/Cafe americano.webp"
+          },
+          americano_a_las_rocas: {
+            titulo: "Café Americano a las Rocas",
+            descripcion: "El sabor intenso del café, servido frío y directo a las rocas.",
+            imagen: "/donchicho/img/cafes/Cafe americano a las rocas.webp"
+          },
+          cortadito: {
+            titulo: "Cortadito",
+            descripcion: "La fusión ideal entre espresso y leche que conquista con equilibrio.",
+            imagen: "/donchicho/img/cafes/cortadito.webp"
+          },
+          espresso_doble: {
+            titulo: "Café Espresso Doble",
+            descripcion: "Doble fuerza, doble sabor y doble motivo para sonreír.",
+            imagen: "/donchicho/img/cafes/espresso_doble.webp"
+          },
+          espresso_sencillo: {
+            titulo: "Café Espresso Sencillo",
+            descripcion: "Un shot de sabor intenso para comenzar el día con toda la energía.",
+            imagen: "/donchicho/img/cafes/espresso_sencillo.webp"
+          }
+        },
+
+        capuchinos: {
+          crema: {
+            titulo: "Capuchino de Crema Irlandesa",
+            descripcion: "Capuchino cremoso con un toque de licor que lo hace único.",
+            imagen: "/donchicho/img/capuchinos/Capuchino de crema irlandesa.webp"
+          },
+          canela: {
+            titulo: "Capuchino de Canela",
+            descripcion: "El sabor casero que te abraza desde el primer sorbo.",
+            imagen: "/donchicho/img/capuchinos/canela.webp"
+          },
+          caramelo: {
+            titulo: "Capuchino de Caramelo",
+            descripcion: "Dulce tentación con un toque tostado que enamora.",
+            imagen: "/donchicho/img/capuchinos/caramelo.webp"
+          },
+          chai: {
+            titulo: "Capuchino de Chai",
+            descripcion: "Especias aromáticas y leche espumosa en la bebida más reconfortante.",
+            imagen: "/donchicho/img/capuchinos/chai.webp"
+          },
+          chocolate_almendrado: {
+            titulo: "Capuchino de Chocolate Almendrado",
+            descripcion: "Una experiencia rica y crujiente con cada sorbo.",
+            imagen: "/donchicho/img/capuchinos/chocolate_almendrado.webp"
+          },
+          chocolate_blanco: {
+            titulo: "Capuchino de Chocolate Blanco",
+            descripcion: "Dulce, suave y con ese sabor que encanta a los más golosos.",
+            imagen: "/donchicho/img/capuchinos/chocolate_blanco.webp"
+          },
+          chocolate_con_menta: {
+            titulo: "Capuchino de Chocolate con Menta",
+            descripcion: "Refrescante y cálido a la vez, una mezcla que sorprende.",
+            imagen: "/donchicho/img/capuchinos/chocolate_con_menta.webp"
+          },
+          chocolate: {
+            titulo: "Capuchino de Chocolate",
+            descripcion: "Cálido, intenso y con el sabor de siempre que reconforta el alma.",
+            imagen: "/donchicho/img/capuchinos/chocolate.webp"
+          },
+          matcha: {
+            titulo: "Capuchino de Matcha",
+            descripcion: "Verde, saludable y con un sabor que energiza cuerpo y mente.",
+            imagen: "/donchicho/img/capuchinos/matcha.webp"
+          },
+          moka: {
+            titulo: "Capuchino de Moka",
+            descripcion: "Chocolate y café en una combinación seductora y reconfortante.",
+            imagen: "/donchicho/img/capuchinos/moka.webp"
+          },
+          taro: {
+            titulo: "Capuchino de Taro",
+            descripcion: "Suave, delicado y con un color encantador.",
+            imagen: "/donchicho/img/capuchinos/taro.webp"
+          },
+          tradicional: {
+            titulo: "Capuchino de Tradicional",
+            descripcion: "Espuma perfecta y sabor equilibrado que nunca falla.",
+            imagen: "/donchicho/img/capuchinos/tradicional.webp"
+          }
+        },
+
+        icelattes: {
+          crema: {
+            titulo: "Ice Latte de Crema Irlandesa",
+            descripcion: "Café frío con ese sabor adulto que enamora.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de crema irlandeza.webp"
+          },
+          canela: {
+            titulo: "Ice Latte de Canela",
+            descripcion: "El sabor cálido de la canela fusionado con la frescura del latte helado.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de canela.webp"
+          },
+          caramelo: {
+            titulo: "Ice Latte de Caramelo",
+            descripcion: "Suavidad helada con un toque dulce y envolvente.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de caramelo.webp"
+          },
+          chai_de_especias: {
+            titulo: "Ice Latte de Chai con Especias",
+            descripcion: "Un festival de sabores especiados en cada trago helado.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de chai con especias.webp"
+          },
+          chai_de_vainilla: {
+            titulo: "Ice Latte de Chai con Vainilla",
+            descripcion: "La intensidad del chai con la suavidad envolvente de la vainilla.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de chai con vainilla.webp"
+          },
+          chai: {
+            titulo: "Ice Latte de Chai",
+            descripcion: "Especias aromáticas en una bebida que despierta los sentidos.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de chai.webp"
+          },
+          chocolate_blanco: {
+            titulo: "Ice Latte de Chocolate Blanco",
+            descripcion: "Dulzura cremosa y frescura que se disfrutan en cada sorbo.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de chocolate blanco.webp"
+          },
+          espresso: {
+            titulo: "Ice Latte Espresso",
+            descripcion: "Café frío con intensidad y frescura en cada trago.",
+            imagen: "/donchicho/img/ice lattes/Ice latte espresso.webp"
+          },
+          matcha: {
+            titulo: "Ice Latte de Matcha",
+            descripcion: "El equilibrio perfecto entre lo natural y lo refrescante.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de matcha.webp"
+          },
+          moka: {
+            titulo: "Ice Latte de Moka",
+            descripcion: "Chocolate y espresso en su versión más refrescante.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de moka.webp"
+          },
+          taro: {
+            titulo: "Ice Latte de Taro",
+            descripcion: "Un toque exótico y cremoso que sorprende a cada sorbo.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de taro.webp"
+          },
+          vainilla: {
+            titulo: "Ice Latte de Vainilla",
+            descripcion: "La suavidad de la vainilla en una mezcla fresca y reconfortante.",
+            imagen: "/donchicho/img/ice lattes/Ice latte de vainilla.webp"
+          }
+        },
+
+        malteadas: {
+          chicle: {
+            titulo: "Malteada de Chicle",
+            descripcion: "Una explosión de sabor divertido que te transporta directo a tu niñez.",
+            imagen: "/donchicho/img/malteadas/Malteada de chicle.webp"
+          },
+          fresa: {
+            titulo: "Malteada de Fresa",
+            descripcion: "Dulce y suave como los mejores recuerdos de la infancia.",
+            imagen: "/donchicho/img/malteadas/Malteada de fresa.webp"
+          },
+          nutella: {
+            titulo: "Malteada de Nutella",
+            descripcion: "Una malteada de ensueño con el sabor adorado del chocolate y avellanas.",
+            imagen: "/donchicho/img/malteadas/Malteada de nutella.webp"
+          },
+          galleta: {
+            titulo: "Malteada de galleta",
+            descripcion: "La combinación perfecta de galletas y crema en una bebida que nunca pasa de moda.",
+            imagen: "/donchicho/img/malteadas/Malteada de galleta.webp"
+          },
+          rompope: {
+            titulo: "Malteada de Rompope",
+            descripcion: "El sabor de las tradiciones mexicanas ahora en una malteada cremosa y deliciosa.",
+            imagen: "/donchicho/img/malteadas/Malteada de rompope.webp"
+          },
+          chocolate: {
+            titulo: "Malteada de Chocolate",
+            descripcion: "El sabor de las tradiciones mexicanas ahora en una malteada cremosa y deliciosa.",
+            imagen: "/donchicho/img/malteadas/Malteada de chocolate.webp"
+          },
+          vainilla: {
+            titulo: "Malteada de Vainilla",
+            descripcion: "Clásica, elegante y simplemente irresistible.",
+            imagen: "/donchicho/img/malteadas/Malteada de vainilla.webp"
+          }
+        },
+
+        smoothies: {
+          fresa: {
+            titulo: "Smoothie de Fresa",
+            descripcion: "Suave, dulce y perfecta para cualquier momento del día.",
+            imagen: "/donchicho/img/smoothies/Smoothie de fresa.webp"
+          },
+          limon: {
+            titulo: "Smoothie de Limón",
+            descripcion: "Refrescante, ácido y lleno de vitalidad.",
+            imagen: "/donchicho/img/smoothies/Smoothie de limon.webp"
+          },
+          mango: {
+            titulo: "Smoothie de Mango",
+            descripcion: "Una explosión de sabor tropical y frescura natural.",
+            imagen: "/donchicho/img/smoothies/Smoothie de mango.webp"
+          }
+        },
+
+        tesfrios: {
+          limon: {
+            titulo: "Té de Limón",
+            descripcion: "Fresco, ligero y perfecto para calmar la sed con sabor.",
+            imagen: "/donchicho/img/tes/limon.webp"
+          },
+          negro_con_limon: {
+            titulo: "Té Negro con Limón",
+            descripcion: "Cuerpo intenso con el frescor cítrico que necesitas.",
+            imagen: "/donchicho/img/tes/negro_con_limon.webp"
+          }
+        },
+
+        tescalientes: {
+          blanco_con_menta: {
+            titulo: "Té Blanco con Menta",
+            descripcion: "Refrescante y suave, con la ligereza del té blanco y el toque fresco de la menta.",
+            imagen: "/donchicho/img/tes calientes/blanco_con_menta.webp"
+          },
+          jengibre_y_lima: {
+            titulo: "Té de Jengibre y Lima",
+            descripcion: "Un equilibrio vibrante entre el picor del jengibre y la frescura cítrica de la lima.",
+            imagen: "/donchicho/img/tes calientes/jengibre_y_lima.webp"
+          },
+          manzanilla_y_lavanda: {
+            titulo: "Té de Manzanilla y Lavanda",
+            descripcion: "Flores delicadas en una mezcla que relaja el alma y envuelve tus sentidos.",
+            imagen: "/donchicho/img/tes calientes/manzanilla_y_lavanda.webp"
+          },
+          manzanilla_hinojo_y_aloe_vera: {
+            titulo: "Té de Manzanilla, Hinojo y Aloe",
+            descripcion: "Suavidad herbal que armoniza cuerpo y mente con cada sorbo natural.",
+            imagen: "/donchicho/img/tes calientes/manzanilla_hinojo_y_aloe_vera.webp"
+          },
+          negro_con_frutos_rojos: {
+            titulo: "Té Negro con Frutos Rojos",
+            descripcion: "La intensidad del té negro combinada con la dulzura vibrante de los frutos rojos.",
+            imagen: "/donchicho/img/tes calientes/negro_con_frutos_rojos.webp"
+          },
+          tisana: {
+            titulo: "Té de Tisana",
+            descripcion: "Infusión de hierbas y frutas, un abrazo cálido de sabores y bienestar.",
+            imagen: "/donchicho/img/tes calientes/tisana.webp"
+          },
+          verde_limon: {
+            titulo: "Té Verde Limón",
+            descripcion: "El frescor cítrico del limón realza la suavidad del té verde en una mezcla revitalizante.",
+            imagen: "/donchicho/img/tes calientes/verde_limon.webp"
+          }
+        },
+
+        bananasplit: {
+          bananasplit: {
+            titulo: "Banana Split",
+            descripcion: "Un clásico lleno de sabor, color y felicidad.",
+            imagen: "/donchicho/img/banana splits/banana_split.webp"
+          }
+        },
+
+        brownies: {
+          byme_con_helado: {
+            titulo: "Brownie ByMe con Helado",
+            descripcion: "Caliente y frío en una mezcla perfecta para el paladar.",
+            imagen: "/donchicho/img/brownies/Brownie byme con helado.webp"
+          },
+          byme: {
+            titulo: "Brownie ByMe",
+            descripcion: "Suave, intenso y listo para conquistar a los amantes del chocolate.",
+            imagen: "/donchicho/img/brownies/Brownie byme.webp"
+          },
+          dulces_detalles: {
+            titulo: "Brownie Dulces Detalles",
+            descripcion: "Equilibrio perfecto entre suavidad y sabor intenso que enamora desde el primer bocado.",
+            imagen: "/donchicho/img/brownies/Brownie dulces detalles.webp"
+          }
+        },
+
+        galletas: {
+          byme_avena: {
+            titulo: "Galletas de Avena ByMe",
+            descripcion: "La esencia de la avena en una galleta que sabe a hogar.",
+            imagen: "/donchicho/img/galletas/Galletas de avena byme.webp"
+          },
+          dulces_detalles_avena: {
+            titulo: "Galletas de Avena Dulces Detalles",
+            descripcion: "Un toque dulce en cada mordida, ideal para consentirte a cualquier hora.",
+            imagen: "/donchicho/img/galletas/Galletas de avena dulces detalles.webp"
+          },
+          dulces_detalles_canela: {
+            titulo: "Galletas de Canela Dulces Detalles",
+            descripcion: "El sabor envolvente de la canela en una galleta que conquista al instante.",
+            imagen: "/donchicho/img/galletas/Galletas de canela dulces detalles.webp"
+          }
+        },
+
+        helados: {
+          helado_cafe: {
+            titulo: "Helado de Café",
+            descripcion: "El sabor de tu café favorito convertido en una experiencia helada.",
+            imagen: "/donchicho/img/helados/Helado de cafe.webp"
+          },
+          helado_calabaza: {
+            titulo: "Helado de Calabaza",
+            descripcion: "Cremoso y especiado, el sabor otoñal perfecto en cada cucharada.",
+            imagen: "/donchicho/img/helados/Helado de calabaza.webp"
+          },
+          helado_chicle: {
+            titulo: "Helado de Chicle",
+            descripcion: "Colorido y divertido, como un helado salido de un sueño.",
+            imagen: "/donchicho/img/helados/Helado de chicle.webp"
+          },
+          helado_chocolate: {
+            titulo: "Helado de Chocolate",
+            descripcion: "Un clásico intenso que nunca pasa de moda.",
+            imagen: "/donchicho/img/helados/Helado de chocolate.webp"
+          },
+          helado_chongos: {
+            titulo: "Helado de Chongos",
+            descripcion: "Sabor 100% mexicano, convertido en un helado que te sorprenderá.",
+            imagen: "/donchicho/img/helados/Helado de chongos.webp"
+          },
+          helado_coco: {
+            titulo: "Helado de Coco",
+            descripcion: "Tropical, cremoso y suave como una brisa de playa.",
+            imagen: "/donchicho/img/helados/Helado de coco.webp"
+          },
+          helado_fresa_de_agua: {
+            titulo: "Helado de Fresa de Agua",
+            descripcion: "Ligero, afrutado y naturalmente delicioso.",
+            imagen: "/donchicho/img/helados/Helado de fresa de agua.webp"
+          },
+          helado_fresa: {
+            titulo: "Helado de Fresa",
+            descripcion: "Refrescante y naturalmente dulce, como una tarde de primavera.",
+            imagen: "/donchicho/img/helados/Helado de fresa.webp"
+          },
+          helado_frutos_secos: {
+            titulo: "Helado de Frutos Secos",
+            descripcion: "Crocante y sabroso, con el toque especial de la tradición.",
+            imagen: "/donchicho/img/helados/Helado de frutos secos.webp"
+          },
+          helado_galleta: {
+            titulo: "Helado de Galleta",
+            descripcion: "Crujiente y cremoso a la vez, con todo el encanto de la Galletas más famosa.",
+            imagen: "/donchicho/img/helados/Helado de galleta galleta.webp"
+          },
+          helado_limon: {
+            titulo: "Helado de Limón",
+            descripcion: "Refrescante, ácido y perfecto para los días de calor.",
+            imagen: "/donchicho/img/helados/Helado de limon.webp"
+          },
+          helado_mango: {
+            titulo: "Helado de Mango",
+            descripcion: "Dulce, jugoso y con el sabor tropical más popular.",
+            imagen: "/donchicho/img/helados/Helado de mango.webp"
+          },
+          helado_mantequilla: {
+            titulo: "Helado de Mantequilla",
+            descripcion: "Una textura suave con el delicado sabor de la mantequilla artesanal.",
+            imagen: "/donchicho/img/helados/Helado de mantequilla.webp"
+          },
+          helado_nuez: {
+            titulo: "Helado de Nuez",
+            descripcion: "Dulce, cremoso y con un crujido que te encantará.",
+            imagen: "/donchicho/img/helados/Helado de nuez.webp"
+          },
+          helado_pistache: {
+            titulo: "Helado de Pistache",
+            descripcion: "Elegante y exótico, con ese sabor que solo el pistache puede darte.",
+            imagen: "/donchicho/img/helados/Helado de pistache.webp"
+          },
+          helado_rompope: {
+            titulo: "Helado de Rompope",
+            descripcion: "El clásico sabor casero del rompope convertido en un helado irresistible.",
+            imagen: "/donchicho/img/helados/Helado de rompope.webp"
+          },
+          helado_vainilla: {
+            titulo: "Helado de Vainilla",
+            descripcion: "Suavidad clásica con el sabor puro de la vainilla natural.",
+            imagen: "/donchicho/img/helados/Helado de vainilla.webp"
+          }
+        }
+      };
+
+
+
+      if (productos[categoria] && productos[categoria][id]) {
+        const p = productos[categoria][id];
+        document.getElementById('productoImagen').src = p.imagen;
+        document.getElementById('productoTitulo').textContent = p.titulo;
+        document.getElementById('productoDescripcion').textContent = p.descripcion;
+        document.getElementById('botonVolver').href = p.volver;
+
+        document.title = p.titulos + " | Don Chicho";
+      } else {
+        document.body.innerHTML = `
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; font-family: Arial, sans-serif;">
+      <h1 style="color: #503820; font-size: 2rem;">Producto no encontrado</h1>
+      <p style="margin: 10px 0; color: #555;">Es posible que el producto no exista o haya sido eliminado.</p>
+      <a href="index.html" style="margin-top: 15px; background: #503820; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;">Volver al inicio</a>
+    </div>
+  `;
+        document.title = "Producto no encontrado | Don Chicho";
+      }
+    </script>
+
+    <footer class="footer">
+      <div style="height: 1px; background-color: #ccc;"></div>
+      <div class="footer-container">
+        <div class="social">
+          <a href="https://wa.me/523921021698" target="_blank">
+            <img src="/donchicho/img/iconos/whatsapp.svg" alt="WhatsApp" />
+          </a>
+          <a href="https://www.facebook.com/nievedegarrafaloschichosjamay">
+            <img src="/donchicho/img/iconos/social-facebook.svg" alt="facebook" />
+          </a>
+          <a href="https://instagram.com">
+            <img src="/donchicho/img/iconos/social-instagram.svg" alt="" />
+          </a>
+        </div>
+        <p>© 2025 Nieves de Garrafa y Café "Don Chicho". Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/iconos/logosinmarco.png" type="images/x-icon">
+  <title>Historia | Don Chicho</title>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XJMK44YN3R');
+</script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="img/iconos/logosinmarco.png" alt="Don Chicho" />
+        </a>
+      </div>
+
+      <ul class="navbar-nav-left">
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+
+      <ul class="navbar-nav-right">
+        <li>
+          <a href="localiza.html">
+            <img src="img/iconos/location.svg" alt="" />
+            <span>Localiza sucursal</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+523921021698" class="btn btn-light">Teléfono</a>
+        </li>
+        <li>
+          <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+            WhatsApp
+          </button>
+        </li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button type="button" class="hamburger" id="menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+    <ul>
+      <li>
+        <a href="menu.html">Menú</a>
+      </li>
+      <li>
+        <a href="historia.html">Historia</a>
+      </li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <div style="display: flex; gap: 10px;">
+        <a href="tel:+523921021698">
+          <button class="btn btn-light">Teléfono</button>
+        </a>
+        <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+          WhatsApp
+        </button>
+      </div>
+      <div>
+        <a href="localiza.html">
+          <img src="img/iconos/location.svg" alt="" />
+          <span>Localiza sucursal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <header class="encabezado">
+    <h1>Un poco de historia</h1>
+  </header>
+
+  <!-- Box 1 -->
+  <section class="box box-1 bg-secondary grid-col-2" data-aos="fade-up">
+    <img src="img/historia/Logo.JPG" alt="Principal" />
+    <div class="box-text">
+      <h2 class="text-xl">Tradición Artesanal</h2>
+      <p class="text-md">
+        ¿Te imaginas estar agitando durante una hora una garrafa de nieve?
+        Solo personas con amor al arte lo hacen.
+        Hacer nieve de garrafa es considerado algo artesanal por su elaboración cien por ciento manual.
+        El artesano hace la nieve con sus manos y le pone creatividad a los sabores.
+        La historia de las nieves de garrafa comenzó con los italianos desde la
+        época colonial. En aquel entonces la nieve se elaboraba en garrafas y cubertas de madera, el contenido se
+        batía con una manivela y la nieve pegada en los bordes se retiraba con una pala.
+        Actualmente el procedimiento es el mismo y para que sean originales todos los ingredientes deben de ser
+        cien por ciento naturales. Esta tradición prevaleció en el estado de Jalisco, donde puedes encontrar
+        todavía locales de nieve de garrafa como por ejemplo:
+        "Nieve de Garrafa Don Chicho"
+        Los mejores de la Ribera de Chapala
+        Orgullosamente de Jamay.
+        Gracias por hacernos vigentes con más de 50 años de experiencia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Box 2 -->
+  <section class="box box-2 bg-secondary grid-col-2 grid-reversed" data-aos="fade-up">
+    <img src="img/historia/Primera Nieve.JPG" alt="Nieves" />
+    <div class="box-text">
+      <h2 class="text-xl">El Inicio de Nuestro Legado</h2>
+      <p class="text-md">
+        Las primeras nieves de garrafa fueron el inicio de todo. Con el tiempo, perfeccionamos nuestra receta,
+        pero nunca perdimos la esencia de lo que comenzó como un pequeño proyecto lleno de pasión. Hoy, esa receta
+        sigue viva, y cada nieve que preparamos sigue siendo un homenaje a esos primeros pasos.
+      </p>
+    </div>
+  </section>
+
+  <!-- Box 3 -->
+  <section class="box box-3 bg-primary grid-col-2" data-aos="fade-up">
+    <img src="img/historia/Primesa Sucursal.JPG" alt="Sucursal" />
+    <div class="box-text">
+      <h2 class="text-xl">Primera Sucursal</h2>
+      <p class="text-md">
+        Nuestra primera sucursal sigue siendo especial para nosotros. Aunque con los años ha cambiado, su esencia
+        permanece. Es el lugar donde todo comenzó, y aún hoy, sigue siendo el corazón de Don Chicho, donde se
+        conservan los recuerdos de los primeros clientes y las primeras nieves que hicimos con tanto amor.
+      </p>
+    </div>
+  </section>
+
+  <!-- Box 4 -->
+  <section class="box box-4 bg-secondary grid-col-2 grid-reversed" data-aos="fade-up">
+    <img src="img/historia/pasaje.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">Sucursal Pasaje</h2>
+      <p class="text-md">
+        La apertura de nuestra sucursal Pasaje fue un día lleno de emoción. Nos costó trabajo, pero valió la
+        pena. Desde el primer momento, las personas acudieron a disfrutar de nuestras nieves, y la comunidad nos
+        recibió con los brazos abiertos. Ese día marcó el inicio de una nueva etapa para Don Chicho, un paso más
+        hacia el crecimiento y la consolidación de lo que hoy somos.
+      </p>
+    </div>
+  </section>
+
+  <!-- Box G -->
+  <section class="box box-5 bg-primary grid-col-2" data-aos="fade-up">
+    <img src="img/index/parroquia.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">Sucursal Parroquia</h2>
+      <p class="text-md">
+        La apertura de la sucursal Parroquia fue otro momento clave en nuestra historia. La expectativa era alta,
+        y la gente acudió en masa para disfrutar de nuestras nieves. Ese día, nos dimos cuenta de que Don Chicho
+        ya no era solo un sueño, sino una realidad en cada rincón de la ciudad. Desde entonces, seguimos
+        creciendo, siempre con la misma pasión y compromiso por ofrecer lo mejor.
+      </p>
+    </div>
+  </section>
+
+  <!-- Box H -->
+  <section class="box box-6 bg-secondary grid-col-2 grid-reversed" data-aos="fade-up">
+    <img src="img/historia/chicho zamora 3.jpg" alt="" />
+    <div class="box-text">
+      <h2 class="text-xl">Don Chicho Zamora</h2>
+      <p class="text-md">
+        Rendimos homenaje al fundador de Don Chicho, quien con su dedicación y amor por la nieve de garrafa, creó
+        lo que somos hoy. Su famosa frase, "Lloren niños, lloren", expresaba su alegría al ver a los niños
+        disfrutar de su creación. Aunque ya no está con nosotros, su legado sigue vivo en cada nieve que
+        preparamos con cariño. Hoy seguimos su ejemplo de trabajo con pasión y autenticidad.
+      </p>
+    </div>
+  </section>
+
+
+
+  <!-- Box 7 -->
+  <section class="box box-7 bg-primary grid-col-2" data-aos="fade-up">
+    <img src="img/historia/actualidad.jpg" alt="Inicio" />
+    <div class="box-text">
+      <h2 class="text-xl">Hoy en la Actualidad</h2>
+      <p class="text-md">
+        Hoy, Don Chicho sigue siendo un referente en las nieves de garrafa. Con el paso de los años, hemos
+        crecido sin perder nuestra esencia: ofrecer un producto auténtico y lleno de pasión. Nos enorgullece ver
+        cómo generaciones siguen disfrutando de nuestros sabores y cómo seguimos compartiendo nuestra tradición
+        con nuevos clientes. Don Chicho es más que una marca, es una comunidad que cree en hacer las cosas con
+        amor y dedicación.
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+<footer class="footer">
+  <div style="height: 1px; background-color: #ccc;"></div>
+  <div class="footer-container">
+    <div class="social">
+      <a href="https://wa.me/523921021698" target="_blank">
+        <img src="./img/iconos/whatsapp.svg" alt="WhatsApp" />
+      </a>
+      <a href="https://www.facebook.com/nievedegarrafaloschichosjamay">
+        <img src="./img/iconos/social-facebook.svg" alt="facebook" />
+      </a>
+      <a href="https://instagram.com">
+        <img src="./img/iconos/social-instagram.svg" alt="" />
+      </a>
+    </div>
+    <p>© 2025 Nieves de Garrafa y Café "Don Chicho". Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</html>

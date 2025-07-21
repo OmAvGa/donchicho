@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/iconos/logosinmarco.png" type="image/png" />
+  <title>Don Chicho</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJMK44YN3R');
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="img/iconos/logosinmarco.png" alt="Don Chicho" />
+        </a>
+      </div>
+
+      <ul class="navbar-nav-left">
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+
+      <ul class="navbar-nav-right">
+        <li>
+          <a href="localiza.html">
+            <img src="img/iconos/location.svg" alt="" />
+            <span>Localiza sucursal</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+523921021698" class="btn btn-light">Teléfono</a>
+        </li>
+        <li>
+          <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+            WhatsApp
+          </button>
+        </li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button type="button" class="hamburger" id="menu-btn">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+    <ul>
+      <li>
+        <a href="menu.html">Menú</a>
+      </li>
+      <li>
+        <a href="historia.html">Historia</a>
+      </li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <div style="display: flex; gap: 10px;">
+        <a href="tel:+523921021698">
+          <button class="btn btn-light">Teléfono</button>
+        </a>
+        <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+          WhatsApp
+        </button>
+      </div>
+      <div>
+        <a href="localiza.html">
+          <img src="img/iconos/location.svg" alt="" />
+          <span>Localiza sucursal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: rgba(55, 32, 13, 0.3); margin: 1.5rem 0;"></div>
+<div class="menu">
+  <div class="menu-items">
+    <div class="item-head" style="display: flex; align-items: center; gap: 10px;">
+      <a href="javascript:void(0)" onclick="history.back()" style="display: flex; align-items: center;">
+        <img src="img/iconos/atras.png" alt="Atrás" style="width: 20px; height: 20px; cursor: pointer;">
+      </a>
+      <h2 style="margin: 0;"><strong id="tituloCategoria">Categoría</strong></h2>
+    </div>
+    <div class="order-menu-items" id="contenedorProductos">
+      <!-- Productos se insertan aquí dinámicamente -->
+    </div>
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const categoria = params.get('categoria');
+
+const productos = {
+  frappes: [
+    { id: "espresso", nombre: "Espresso", imagen: "img/frappes/Frappe espresso.webp" },
+    { id: "crema", nombre: "Crema Irlandesa", imagen: "img/frappes/Frappe de crema irlandesa.webp" },
+    { id: "caramelo", nombre: "Caramelo", imagen: "img/frappes/Frappe de caramelo.webp" },
+    { id: "moka", nombre: "Moka", imagen: "img/frappes/Frappe de moka.webp" },
+    { id: "banana_moka", nombre: "Banana Moka", imagen: "img/frappes/Frappe de banana moka.webp" },
+    { id: "taro", nombre: "Taro", imagen: "img/frappes/Frappe de taro.webp" },
+    { id: "licor_de_cafe", nombre: "Licor de café", imagen: "img/frappes/Frappe de licor de cafe.webp" },
+    { id: "licor_de_almendras", nombre: "Licor de Almendras", imagen: "img/frappes/Frappe de licor de almendras.webp" },
+    { id: "matcha", nombre: "Matcha", imagen: "img/frappes/Frappe de matcha.webp" },
+    { id: "chai", nombre: "Chai", imagen: "img/frappes/Frappe de chai.webp" },
+    { id: "chocolate_blanco", nombre: "Chocolate Blanco", imagen: "img/frappes/Frappe de chocolate blanco.webp" },
+    { id: "canela", nombre: "Canela", imagen: "img/frappes/Frappe de canela.webp" },
+    { id: "moka_con_menta", nombre: "Moka con Menta", imagen: "img/frappes/Frappe de moka con menta.webp" },
+    { id: "red_velvet", nombre: "Red Velvet", imagen: "img/frappes/Frappe de red velvet.webp" }
+  ],
+  malteadas: [
+    { id: "galleta", nombre: "Galleta", imagen: "img/malteadas/Malteada de galleta.webp" },
+    { id: "fresa", nombre: "Fresa", imagen: "img/malteadas/Malteada de fresa.webp" },
+    { id: "vainilla", nombre: "Vainilla", imagen: "img/malteadas/Malteada de vainilla.webp" },
+    { id: "rompope", nombre: "Rompope", imagen: "img/malteadas/Malteada de rompope.webp" },
+    { id: "chicle", nombre: "Chicle", imagen: "img/malteadas/Malteada de chicle.webp" },
+    { id: "chocolate", nombre: "Chocolate", imagen: "img/malteadas/Malteada de chocolate.webp" },
+    { id: "nutella", nombre: "Nutella", imagen: "img/malteadas/Malteada de nutella.webp" }
+  ],
+  cafes: [
+    { id: "espresso_sencillo", nombre: "Espresso Sencillo", imagen: "img/cafes/espresso_sencillo.webp" },
+    { id: "espresso_doble", nombre: "Espresso Doble", imagen: "img/cafes/espresso_doble.webp" },
+    { id: "cortadito", nombre: "Cortadito", imagen: "img/cafes/cortadito.webp" },
+    { id: "americano", nombre: "Americano", imagen: "img/cafes/Cafe americano.webp" },
+    { id: "americano_intenso", nombre: "Americano Intenso", imagen: "img/cafes/americano_intenso.webp" },
+    { id: "americano_a_las_rocas", nombre: "Americano a las Rocas", imagen: "img/cafes/Cafe americano a las rocas.webp" },
+    { id: "affogato", nombre: "Affogato", imagen: "img/cafes/affogato.webp" }
+  ],
+  capuchinos: [
+    { id: "tradicional", nombre: "Tradicional", imagen: "img/capuchinos/tradicional.webp" },
+    { id: "crema", nombre: "Crema Irlandesa", imagen: "img/capuchinos/capuchino de crema irlandesa.webp" },
+    { id: "moka", nombre: "Moka", imagen: "img/capuchinos/moka.webp" },
+    { id: "chocolate_blanco", nombre: "Chocolate Blanco", imagen: "img/capuchinos/chocolate_blanco.webp" },
+    { id: "chocolate_almendrado", nombre: "Chocolate Almendrado", imagen: "img/capuchinos/chocolate_almendrado.webp" },
+    { id: "chocolate", nombre: "Chocolate", imagen: "img/capuchinos/chocolate.webp" },
+    { id: "chocolate_con_menta", nombre: "Chocolate con Menta", imagen: "img/capuchinos/chocolate_con_menta.webp" },
+    { id: "taro", nombre: "Taro", imagen: "img/capuchinos/taro.webp" },
+    { id: "caramelo", nombre: "Caramelo", imagen: "img/capuchinos/caramelo.webp" },
+    { id: "matcha", nombre: "Matcha", imagen: "img/capuchinos/matcha.webp" },
+    { id: "chai", nombre: "Chai", imagen: "img/capuchinos/chai.webp" },
+    { id: "canela", nombre: "Canela", imagen: "img/capuchinos/canela.webp" }
+  ],
+  icelattes: [
+    { id: "espresso", nombre: "Espresso", imagen: "img/ice lattes/Ice latte espresso.webp" },
+    { id: "caramelo", nombre: "Caramelo", imagen: "img/ice lattes/Ice latte de caramelo.webp" },
+    { id: "crema", nombre: "Crema Irlandesa", imagen: "img/ice lattes/Ice latte de crema irlandesa.webp" },
+    { id: "moka", nombre: "Moka", imagen: "img/ice lattes/Ice latte de moka.webp" },
+    { id: "taro", nombre: "Taro", imagen: "img/ice lattes/Ice latte de taro.webp" },
+    { id: "vainilla", nombre: "Vainilla", imagen: "img/ice lattes/Ice latte de vainilla.webp" },
+    { id: "canela", nombre: "Canela", imagen: "img/ice lattes/Ice latte de canela.webp" },
+    { id: "matcha", nombre: "Matcha", imagen: "img/ice lattes/Ice latte de matcha.webp" },
+    { id: "chai", nombre: "Chai", imagen: "img/ice lattes/Ice latte de chai.webp" },
+    { id: "chai_de_vainilla", nombre: "Chai de Vainilla", imagen: "img/ice lattes/Ice latte de chai_de_vainilla.webp" },
+    { id: "chai_de_especias", nombre: "Chai de Especias", imagen: "img/ice lattes/Ice latte de chai_de_especias.webp" },
+    { id: "chocolate_blanco", nombre: "Chocolate Blanco", imagen: "img/ice lattes/Ice latte de chocolate_blanco.webp" }
+  ],
+  tesfrios: [
+    { id: "limon", nombre: "Limón", imagen: "img/tes frios/limon.webp" },
+    { id: "negro_con_limon", nombre: "Negro con Limón", imagen: "img/tes frios/negro_con_limon.webp" }
+  ],
+  tescalientes: [
+    { id: "manzanilla_y_lavanda", nombre: "Manzanilla y Lavanda", imagen: "img/tes_calientes/manzanilla_lavanda.webp" },
+    { id: "manzanilla_hinojo_y_aloe_vera", nombre: "Manzanilla, Hinojo y Aloe Vera", imagen: "img/tes_calientes/manzanilla_hinojo_aloe.webp" },
+    { id: "verde_limon", nombre: "Verde Limón", imagen: "img/tes_calientes/verde_limon.webp" },
+    { id: "negro_con_frutos_rojos", nombre: "Negro con Frutos Rojos", imagen: "img/tes_calientes/negro_frutos_rojos.webp" },
+    { id: "blanco_con_menta", nombre: "Blanco con Menta", imagen: "img/tes_calientes/blanco_menta.webp" },
+    { id: "jengibre_y_lima", nombre: "Jengibre y Lima", imagen: "img/tes_calientes/jengibre_lima.webp" },
+    { id: "tisana", nombre: "Tisana", imagen: "img/tes_calientes/tisana.webp" }
+  ],
+  smoothies: [
+    { id: "mango", nombre: "Mango", imagen: "img/smoothies/Smoothie de mango.webp" },
+    { id: "limon", nombre: "Limón", imagen: "img/smoothies/Smoothie de limon.webp" },
+    { id: "fresa", nombre: "Fresa", imagen: "img/smoothies/Smoothie de fresa.webp" }
+  ],
+  helados: [
+  { id: "helado_vainilla", nombre: "Vainilla", imagen: "img/helados/Helado de vainilla.webp" },
+  { id: "helado_fresa", nombre: "Fresa", imagen: "img/helados/Helado de fresa.webp" },
+  { id: "helado_cafe", nombre: "Café", imagen: "img/helados/Helado de cafe.webp" },
+  { id: "helado_galleta", nombre: "Galleta", imagen: "img/helados/Helado de galleta.webp" },
+  { id: "helado_frutos_secos", nombre: "Frutos Secos", imagen: "img/helados/Helado de frutos secos.webp" },
+  { id: "helado_chongos", nombre: "Chongos", imagen: "img/helados/Helado de chongos.webp" },
+  { id: "helado_nuez", nombre: "Nuez", imagen: "img/helados/Helado de nuez.webp" },
+  { id: "helado_chocolate", nombre: "Chocolate", imagen: "img/helados/Helado de chocolate.webp" },
+  { id: "helado_pistache", nombre: "Pistache", imagen: "img/helados/Helado de pistache.webp" },
+  { id: "helado_limon", nombre: "Limón", imagen: "img/helados/Helado de limon.webp" },
+  { id: "helado_coco", nombre: "Coco", imagen: "img/helados/Helado de coco.webp" },
+  { id: "helado_fresa_de_agua", nombre: "Fresa de Agua", imagen: "img/helados/Helado de fresa de agua.webp" },
+  { id: "helado_chicle", nombre: "Chicle", imagen: "img/helados/Helado de chicle.webp" },
+  { id: "helado_mango", nombre: "Mango", imagen: "img/helados/Helado de mango.webp" },
+  { id: "helado_rompope", nombre: "Rompope", imagen: "img/helados/Helado de rompope.webp" },
+  { id: "helado_calabaza", nombre: "Calabaza", imagen: "img/helados/Helado de calabaza.webp" },
+  { id: "helado_mantequilla", nombre: "Mantequilla", imagen: "img/helados/Helado de mantequilla.webp" }
+],
+  brownies: [
+    { id: "byme", nombre: "ByMe", imagen: "img/brownies/Brownie byme.webp" },
+    { id: "byme_con_helado", nombre: "ByMe con Helado", imagen: "img/brownies/Brownie byme con helado.webp" },
+    { id: "dulces_detalles", nombre: "Dulces Detalles", imagen: "img/brownies/Brownie dulces detalles.webp" }
+  ],
+  bananasplit: [
+    {id: "bananasplit", nombre: "Banana Split", imagen: "img/banana split/byme.webp"}
+  ],
+  galletas: [
+    { id: "byme_avena", nombre: "Avena ByMe", imagen: "img/galletas/Galletas de avena byme.webp" },
+    { id: "dulces_detalles_avena", nombre: "Avena Dulces Detalles", imagen: "img/galletas/Galletas de avena dulces detalles.webp" },
+    { id: "dulces_detalles_canela", nombre: "Canela Dulces Detalles", imagen: "img/galletas/Galletas de canela dulces detalles.webp" }
+  ]
+};
+
+  const titulos = {
+    frappes: "Frappés",
+    malteadas: "Malteadas",
+    cafes: "Cafés",
+    capuchinos: "Capuchinos",
+    icelattes: "Ice Lattes",
+    tesfrios: "Tés Fríos",
+    tescalientes: "Tés Calientes",
+    smoothies: "Smoothies",
+    helados: "Helados",
+    brownies: "Brownies",
+    bananasplit: "Banana Split",
+    galletas: "Galletas"
+  };
+
+  document.getElementById("tituloCategoria").textContent = titulos[categoria] || "Categoría no encontrada";
+document.title = (titulos[categoria] || "Categoría no encontrada") + " | Don Chicho";
+
+
+  const contenedor = document.getElementById("contenedorProductos");
+
+  if (productos[categoria]) {
+    productos[categoria].forEach(p => {
+      const a = document.createElement("a");
+      a.href = `producto.html?categoria=${categoria}&id=${p.id}`;
+
+      const divOrder = document.createElement("div");
+      divOrder.className = "order-items";
+
+      const divImg = document.createElement("div");
+      const img = document.createElement("img");
+      img.src = p.imagen;
+      img.alt = p.nombre;
+      divImg.appendChild(img);
+
+      const span = document.createElement("span");
+      span.textContent = p.nombre;
+
+      divOrder.appendChild(divImg);
+      divOrder.appendChild(span);
+      a.appendChild(divOrder);
+
+      contenedor.appendChild(a);
+    });
+  } else {
+    contenedor.innerHTML = "<p>No hay productos en esta categoría.</p>";
+  }
+</script>
+
+    <footer class="footer">
+    <div style="height: 1px; background-color: #ccc;"></div>
+    <div class="footer-container">
+      <div class="social">
+        <a href="https://wa.me/523921021698" target="_blank">
+          <img src="./img/iconos/whatsapp.svg" alt="WhatsApp" />
+        </a>
+        <a href="https://www.facebook.com/nievedegarrafaloschichosjamay">
+          <img src="./img/iconos/social-facebook.svg" alt="facebook" />
+        </a>
+        <a href="https://instagram.com">
+          <img src="./img/iconos/social-instagram.svg" alt="" />
+        </a>
+      </div>
+      <p>© 2025 Nieves de Garrafa y Café "Don Chicho". Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
