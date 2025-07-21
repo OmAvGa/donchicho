@@ -196,7 +196,7 @@ menu {
 
 .box-a {
   background-image:
-    url('img/marca\ de\ agua\ 2.png'),
+    url('img/iconos/marca\ de\ agua\ 2.png'),
     linear-gradient(to right,
       #745637,
       #684c2f,
@@ -397,7 +397,7 @@ html,
 body {
   font-family: 'Times New Roman', Times, serif;
   line-height: 1.4;
-  background-image: url('img/marca\ de\ agua.png');
+  background-image: url('img/iconos/marca\ de\ agua.png');
   background-repeat: repeat;
   background-position: center;
   color: #000;
