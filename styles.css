@@ -408,12 +408,6 @@ body {
   flex-direction: column;
 }
 
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* o un valor alto */
-}
 body {
   flex: 1;
 }
