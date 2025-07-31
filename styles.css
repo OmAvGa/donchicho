@@ -709,9 +709,9 @@ section a {
       #541409f9);
   color: #fff;
   border: 3px #000 solid;
-  font-size: 18px;
+  font-size: 12px;
   padding: 10px 20px;
-  animation: bounce 2s infinite;
+  animation: bounce 1s infinite;
 }
 
 /* Backgrounds */
