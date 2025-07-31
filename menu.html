@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="img/iconos/logosinmarco.png" type="image/png" />
   <title>Menú | Don Chicho</title>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
   <script>
@@ -20,12 +21,14 @@
 
     gtag('config', 'G-XJMK44YN3R');
   </script>
+
 </head>
 
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
+
     <div class="navbar-container">
       <div class="navbar-brand">
         <a href="index.html">
@@ -91,6 +94,7 @@
       </div>
     </div>
   </div>
+
   <div class="menu">
     <div class="menu-items">
       <div class="item-head" style="display: flex; align-items: center; gap: 10px;">
@@ -98,7 +102,11 @@
           <img src="img/iconos/atras.png" alt="" style="width: 20px; height: 20px; cursor: pointer;">
         </a>
         <h2 style="margin: 0;"><strong>Conoce nuestras bebidas y postres</strong></h2>
+        <div class="descargar-container">
+          <button class="btn btn-download" onclick="descargarImagen()">Descargar menú</button>
+        </div>
       </div>
+
       <div class="item-head">
         <h3>Bebidas</h3>
       </div>
@@ -189,9 +197,7 @@
       </div>
     </div>
   </div>
-  <div class="descargar-container">
-    <button class="btn btn-dark" onclick="descargarImagen()">Descargar menú</button>
-  </div>
+
 
 
   <footer class="footer">

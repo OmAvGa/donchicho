@@ -690,6 +690,29 @@ section a {
 .btn-light:hover {
   background-color: #ccc;
 }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.btn-download {
+  background: linear-gradient(to right,
+      #c43215f9,
+      #a32c12f9,
+      #8d2610f9,
+      #7a1f0df9,
+      #661a0bf9,
+      #541409f9);
+  color: #fff;
+  border: 3px #000 solid;
+  font-size: 18px;
+  padding: 10px 20px;
+  animation: bounce 2s infinite;
+}
 
 /* Backgrounds */
 .bg-primary {

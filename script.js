@@ -12,7 +12,7 @@ btn.addEventListener('click', navToggle)
 
 //Descargar imagen ↓
   function descargarImagen() {
-    const url = 'img/menu.jpg'; // Ruta de tu imagen
+    const url = 'img/iconos/menu.jpg'; // Ruta de tu imagen
     const link = document.createElement('a');
     link.href = url;
     link.download = 'Menú Don Chicho'; // Nombre del archivo al descargar
