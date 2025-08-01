@@ -1314,27 +1314,3 @@ h1 {
 
   }
 }
-.aviso-sucursal {
-  background-color: #f4f1ec;
-  color: #37200D;
-  padding: 12px 16px;
-  border-left: 4px solid #c43215;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-.aviso-producto {
-  max-width: 90%;
-  width: fit-content;
-  margin: 10px auto;
-  font-size: 0.85rem;
-  color: #6c584c;
-  font-style: italic;
-  background-color: #fdf6e3;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border-left: 4px solid #37200D;
-  text-align: center;
-}
-

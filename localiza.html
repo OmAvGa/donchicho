@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,47 +9,57 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="shortcut icon" href="img/iconos/logosinmarco.png" type="images/x-icon">
   <style>
-    .abierto, .cerrado {
+    .abierto,
+    .cerrado {
       font-weight: bold;
       padding: 4px 8px;
       border-radius: 5px;
       display: inline-block;
     }
+
     .abierto {
       background-color: #c6e8d2;
       color: #0a6835;
     }
+
     .cerrado {
       background-color: #f8d7da;
       color: #842029;
     }
-    
-/* Animación de ascenso solo para la sección de sucursales */
-.contenedor {
-  animation: ascender 0.3s ease-out forwards; /* Duración de 0.3 segundos */
-}
 
-@keyframes ascender {
-  0% {
-    transform: translateY(10px); /* Mueve solo un poquito desde su posición */
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+    /* Animación de ascenso solo para la sección de sucursales */
+    .contenedor {
+      animation: ascender 0.3s ease-out forwards;
+      /* Duración de 0.3 segundos */
+    }
+
+    @keyframes ascender {
+      0% {
+        transform: translateY(10px);
+        /* Mueve solo un poquito desde su posición */
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJMK44YN3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-XJMK44YN3R');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJMK44YN3R');
+  </script>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -91,82 +102,73 @@
     </div>
   </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu hidden" id="menu">
-      <ul>
-        <li>
-          <a href="menu.html">Menú</a>
-        </li>
-        <li>
-          <a href="historia.html">Historia</a>
-        </li>
-      </ul>
-      <div class="mobile-menu-bottom">
-        <div style="display: flex; gap: 10px;">
-          <a href="tel:+523921021698">
-            <button class="btn btn-light">Teléfono</button>
-          </a>
-          <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
-            WhatsApp
-          </button>
-        </div>
-        <div>
-          <a href="localiza.html">
-            <img src="img/iconos/location.svg" alt="" />
-            <span>Localiza sucursal</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
- <!-- Contenedor principal -->
-<div class="contenedor">
-  <!-- Mapa dentro del contenedor en pantalla grande -->
-  <div class="mapa">
-    <iframe
-      id="mapaFrame"
-      width="100%"
-      height="100%"
-      style="border:0;"
-      loading="lazy"
-      allowfullscreen
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-
-  <!-- Menú lateral -->
-  <div class="menu">
-      <p style="color: #842029; background-color: #f8d7da; padding: 10px; border-radius: 5px; font-weight: bold; font-size: 14px; margin-bottom: 15px;">
-    ⚠️ Cualquier otra sucursal con el nombre “Chicho” no está afiliada a nosotros ni ofrece nuestros productos originales.
-  </p>
-    <h2>Localiza sucursal</h2>
-    <h4>Abierto todos los días de la semana</h4>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
     <ul>
-      <li onclick="cargarSucursal('matriz')" id="sucursal-matriz">
-        <h3>Sucursal Matriz</h3>
-        <p>Av. Agustín Yáñez 135, Tepeyac, 47900 Jamay, Jal.</p>
-        <p class="horario">10:00 AM a 10:30 PM</p>
-        <span class="estadoSucursal" id="estado-matriz">ABIERTO</span>
+      <li>
+        <a href="menu.html">Menú</a>
       </li>
-      <li onclick="cargarSucursal('pasaje')" id="sucursal-pasaje">
-        <h3>Punto Xentro</h3>
-        <p>Morelos 13-A, Centro, 47900 Jamay, Jal.</p>
-        <p class="horario">03:00 PM a 10:30 PM</p>
-        <span class="estadoSucursal" id="estado-pasaje">ABIERTO</span>
-      </li>
-      <li onclick="cargarSucursal('parroquia')" id="sucursal-parroquia">
-        <h3>Parroquia</h3>
-        <p>Allende 69, Centro, 47900 Jamay, Jal.</p>
-        <p class="horario">10:00 AM a 10:30 PM</p>
-        <span class="estadoSucursal" id="estado-parroquia">ABIERTO</span>
+      <li>
+        <a href="historia.html">Historia</a>
       </li>
     </ul>
+    <div class="mobile-menu-bottom">
+      <div style="display: flex; gap: 10px;">
+        <a href="tel:+523921021698">
+          <button class="btn btn-light">Teléfono</button>
+        </a>
+        <button class="btn btn-dark" onclick="window.open('https://wa.me/523921021698', '_blank')">
+          WhatsApp
+        </button>
+      </div>
+      <div>
+        <a href="localiza.html">
+          <img src="img/iconos/location.svg" alt="" />
+          <span>Localiza sucursal</span>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor">
+    <!-- Mapa dentro del contenedor en pantalla grande -->
+    <div class="mapa">
+      <iframe id="mapaFrame" width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="menu">
+      <h2>Localiza sucursal</h2>
+      <h4>Abierto todos los días de la semana</h4>
+      <ul>
+        <li onclick="cargarSucursal('matriz')" id="sucursal-matriz">
+          <h3>Sucursal Matriz</h3>
+          <p>Av. Agustín Yáñez 135, Tepeyac, 47900 Jamay, Jal.</p>
+          <p class="horario">10:00 AM a 10:30 PM</p>
+          <span class="estadoSucursal" id="estado-matriz">ABIERTO</span>
+        </li>
+        <li onclick="cargarSucursal('pasaje')" id="sucursal-pasaje">
+          <h3>Punto Xentro</h3>
+          <p>Morelos 13-A, Centro, 47900 Jamay, Jal.</p>
+          <p class="horario">03:00 PM a 10:30 PM</p>
+          <span class="estadoSucursal" id="estado-pasaje">ABIERTO</span>
+        </li>
+        <li onclick="cargarSucursal('parroquia')" id="sucursal-parroquia">
+          <h3>Parroquia</h3>
+          <p>Allende 69, Centro, 47900 Jamay, Jal.</p>
+          <p class="horario">10:00 AM a 10:30 PM</p>
+          <span class="estadoSucursal" id="estado-parroquia">ABIERTO</span>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 
   <footer class="footer">
-      <div style="height: 1px; background-color: #ccc;"></div>
+    <div style="height: 1px; background-color: #ccc;"></div>
     <div class="footer-container">
       <div class="social">
         <a href="https://wa.me/523921021698" target="_blank">
@@ -179,16 +181,13 @@
           <img src="./img/iconos/social-instagram.svg" alt="" />
         </a>
       </div>
-    <p class="aviso-legal">
-        © 2025 Nieves de Garrafa y Café "Don Chicho". Sitio oficial. Solo aplicable para las sucursales originales de
-        Jamay: Parroquia, Punto Xentro y Carretera (Agustín Yáñez 135). Cualquier otro local con el mismo nombre no está
-        afiliado ni autorizado por nosotros. Todos los derechos reservados.
-      </p>    </div>
+© 2025 Nieves de Garrafa y Café "Don Chicho". Todos los derechos reservados.
+    </div>
   </footer>
 
   <!-- Scripts -->
   <script>
-    src="script.js"
+    src = "script.js"
     const sucursales = {
       matriz: {
         horaInicio: "10:00",
@@ -235,14 +234,14 @@
       });
     }
     const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
+    const menu = document.getElementById('menu');
 
-  menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-    menuBtn.classList.toggle('open'); // Por si quieres animar el botón
-  });
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menuBtn.classList.toggle('open'); // Por si quieres animar el botón
+    });
     window.onload = () => cargarSucursal("matriz");
-    
   </script>
 </body>
+
 </html>
