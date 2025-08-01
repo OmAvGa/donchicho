@@ -1314,3 +1314,17 @@ h1 {
 
   }
 }
+
+.telefono-curvo {
+  letter-spacing: 12px; /* ajusta el valor para más o menos espacio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10;
+  margin-bottom: -40px; /* pega más el número al título */
+  overflow: visible;
+}
+
+.order-items2 {
+  margin-bottom: -45px; /* Ajusta para pegar más la imagen al número */
+}
